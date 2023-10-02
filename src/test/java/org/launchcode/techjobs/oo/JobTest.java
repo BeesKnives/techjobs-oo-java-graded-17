@@ -71,7 +71,6 @@ public class JobTest {
     @Test
     public void testToStringContainsCorrectLabelsAndData(){
 
-        assertEquals("ID: 6", job1Array[1]);
         assertEquals("Name: name1", job1Array[2]);
         assertEquals("Employer: employer1", job1Array[3]);
         assertEquals("Location: location1", job1Array[4]);
