@@ -57,4 +57,9 @@ public class TestTaskFour extends AbstractTest {
             fail("JobTest does not have a testJobsForEquality method");
         }
     }
+
+
+
+
+
 }

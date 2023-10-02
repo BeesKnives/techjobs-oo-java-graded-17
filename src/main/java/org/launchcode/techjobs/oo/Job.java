@@ -22,6 +22,7 @@ public class Job {
         nextId ++;
     }
 
+
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency){
         this();
         this.name = name;
@@ -96,4 +97,36 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+
+
+
+    public String checkStringForEmpty(String aString){
+        if (aString.equals("")){
+            return "Data not available";
+        }
+        return aString;
+    }
+
+    @Override
+    public String toString() {
+        //If a field is empty, the method should add, “Data not available” after the label. (see above method, used below)
+
+
+        return  System.lineSeparator() +
+                "ID: " + id + System.lineSeparator() +
+                "Name: " + checkStringForEmpty(name) + System.lineSeparator() +
+                "Employer: " + checkStringForEmpty(String.valueOf(employer)) + System.lineSeparator() +
+                "Location: " + checkStringForEmpty(String.valueOf(location)) + System.lineSeparator() +
+                "Position Type: " + checkStringForEmpty(String.valueOf(positionType)) + System.lineSeparator() +
+                "Core Competency: " + checkStringForEmpty(String.valueOf(coreCompetency)) + System.lineSeparator();
+    }
+    //lineSeparator()
+    //ID:  _______
+    //Name: _______
+    //Employer: _______
+    //Location: _______
+    //Position Type: _______
+    //Core Competency: _______
+    //lineSeparator()
 }
